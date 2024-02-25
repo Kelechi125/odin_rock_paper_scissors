@@ -24,13 +24,13 @@
             return;
         }
 
-        let playerScore = 0;
-        let computerScore = 0;
+        let playerScore = 0; //Initialize the user's score from zero
+        let computerScore = 0; //Initialize the computer's score from zero
         let trackPlayerScore = () => {
-            playerScore++;
+            playerScore++; //Increments the user's score if they win
         }
         let trackComputerScore = () => {
-            computerScore++;
+            computerScore++; //Increments the computer's score if they win
         }
 
         // Create function to play a single round
@@ -82,11 +82,21 @@
         //Create functions to track each player's score
         //Initialize variables that hold each player's score
         //When a player wins, increment the variable holding their score using the respective function
-        //
+        //Prompt the user for input
+        //Have the input enter the playRound function
+        //Then play the round
 
         const playGame = () => {
-
+            prompt('Put in your selection:');
+            
+            if (playerScore > computerScore) {
+                console.log('You won the game!')
+            } else if (playerScore < computerScore) {
+                console.log('The computer won!')
+            }
         }
+
+        playGame();
     </script>
 </body>
 </html>
