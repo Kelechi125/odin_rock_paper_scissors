@@ -24,12 +24,21 @@
             return;
         }
 
+        let playerScore = 0;
+        let computerScore = 0;
+        let trackPlayerScore = () => {
+            playerScore++;
+        }
+        let trackComputerScore = () => {
+            computerScore++;
+        }
 
         // Create function to play a single round
         // Assign computerSelection to the getComputerChoice function
         // Create nested conditional statements determining who wins and who loses based on playerSelection
         const playRound = (playerSelection, computerSelection) => {
             computerSelection = getComputerChoice();
+            //Storing the playerSelection parameter into the playerChoice variable allows us to make the user input case-insensitive
             let playerChoice = playerSelection.toLowerCase();
             
             if (playerChoice === 'rock') {
@@ -37,26 +46,32 @@
                     return 'Tie!';
                 } else if (computerSelection === 'Paper') {
                     return 'You lose! Paper beats Rock!';
+                    trackComputerScore();
                 } else {
                     return 'You win! Rock beats Scissors!';
+                    trackPlayerScore();
                 }
             }
 
             if (playerChoice === 'paper') {
                 if (computerSelection === 'Rock') {
                     return 'You win! Paper beats Rock!';
+                    trackPlayerScore();
                 } else if (computerSelection === 'Paper') {
                     return 'Tie!';
                 } else {
                     return 'You lose! Scissors beats Paper!';
+                    trackComputerScore();
                 }
             }
 
             if (playerChoice === 'scissors') {
                 if (computerSelection === 'Rock') {
                     return 'You lose! Rock beats Scissors!';
+                    trackComputerScore;
                 } else if (computerSelection === 'Paper') {
                     return 'You win! Scissors beats Paper!';
+                    trackPlayerScore();
                 } else {
                     return 'Tie!';
                 }
@@ -64,7 +79,14 @@
             return;
         }
 
-        
+        //Create functions to track each player's score
+        //Initialize variables that hold each player's score
+        //When a player wins, increment the variable holding their score using the respective function
+        //
+
+        const playGame = () => {
+
+        }
     </script>
 </body>
 </html>
