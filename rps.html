@@ -43,37 +43,55 @@
             
             if (playerChoice === 'rock') {
                 if (computerSelection === 'Rock') {
-                    return 'Tie!';
+                    console.log('You: Rock');
+                    console.log('Computer: Rock');
+                    console.log('Tie!');
                 } else if (computerSelection === 'Paper') {
-                    return 'You lose! Paper beats Rock!';
+                    console.log('You: Rock');
+                    console.log('Computer: Paper');
+                    console.log('You lose! Paper beats Rock!');
                     trackComputerScore();
                 } else {
-                    return 'You win! Rock beats Scissors!';
+                    console.log('You: Rock');
+                    console.log('Computer: Scissors');
+                    console.log('You win! Rock beats Scissors!');
                     trackPlayerScore();
                 }
             }
 
             if (playerChoice === 'paper') {
                 if (computerSelection === 'Rock') {
-                    return 'You win! Paper beats Rock!';
+                    console.log('You: Paper');
+                    console.log('Computer: Rock');
+                    console.log('You win! Paper beats Rock!');
                     trackPlayerScore();
                 } else if (computerSelection === 'Paper') {
-                    return 'Tie!';
+                    console.log('You: Paper');
+                    console.log('Computer: Paper');
+                    console.log('Tie!');
                 } else {
-                    return 'You lose! Scissors beats Paper!';
+                    console.log('You: Paper');
+                    console.log('Computer: Scissors');
+                    console.log('You lose! Scissors beats Paper!');
                     trackComputerScore();
                 }
             }
 
             if (playerChoice === 'scissors') {
                 if (computerSelection === 'Rock') {
-                    return 'You lose! Rock beats Scissors!';
+                    console.log('You: Scissors');
+                    console.log('Computer: Paper');
+                    console.log('You lose! Rock beats Scissors!');
                     trackComputerScore;
                 } else if (computerSelection === 'Paper') {
-                    return 'You win! Scissors beats Paper!';
+                    console.log('You: Scissors');
+                    console.log('Computer: Paper');
+                    console.log('You win! Scissors beats Paper!');
                     trackPlayerScore();
                 } else {
-                    return 'Tie!';
+                    console.log('You: Scissors');
+                    console.log('Computer: Scissors');
+                    console.log('Tie!');
                 }
             }
             return;
@@ -87,7 +105,7 @@
         //Then play the round
 
         const playGame = () => {
-            prompt('Put in your selection:');
+            
             
             if (playerScore > computerScore) {
                 console.log('You won the game!')
