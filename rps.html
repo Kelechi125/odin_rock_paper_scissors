@@ -80,9 +80,9 @@
             if (playerChoice === 'scissors') {
                 if (computerSelection === 'Rock') {
                     console.log('You: Scissors');
-                    console.log('Computer: Paper');
+                    console.log('Computer: Rock');
                     console.log('You lose! Rock beats Scissors!');
-                    trackComputerScore;
+                    trackComputerScore();
                 } else if (computerSelection === 'Paper') {
                     console.log('You: Scissors');
                     console.log('Computer: Paper');
@@ -105,21 +105,22 @@
         //Then play the round
 
         const playGame = () => {
-            let input = prompt("Rock, Paper, or Scissors?");
-            playRound(input);
-            playRound(input);
-            playRound(input);
-            playRound(input);
-            playRound(input);
+            
+            for (let i = 0; i < 5; i++) {
+                let input = prompt("Rock, Paper, or Scissors?");
+                playRound(input);
+            }
             
             if (playerScore > computerScore) {
-                console.log('You won the game!')
+                console.log('You won the game!');
             } else if (playerScore < computerScore) {
-                console.log('The computer won!')
+                console.log('The computer won!');
             }
         }
 
         playGame();
+        console.log(playerScore);
+        console.log(computerScore);
     </script>
 </body>
 </html>
