@@ -105,7 +105,12 @@
         //Then play the round
 
         const playGame = () => {
-            
+            let input = prompt("Rock, Paper, or Scissors?");
+            playRound(input);
+            playRound(input);
+            playRound(input);
+            playRound(input);
+            playRound(input);
             
             if (playerScore > computerScore) {
                 console.log('You won the game!')
